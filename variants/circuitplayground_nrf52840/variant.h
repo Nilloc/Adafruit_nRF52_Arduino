@@ -54,13 +54,16 @@ extern "C"
 #define LED_STATE_ON         1         // State when LED is litted
 
 // Buttons
-#define PIN_BUTTON1          (4)
-#define PIN_BUTTON2          (5)
+#define PIN_BUTTON1          (4)    // Button A (Left)
+#define PIN_BUTTON2          (5)    // Button B (Right)
 
 // Microphone
 #define PIN_PDM_DIN           24
 #define PIN_PDM_CLK           25
 #define PIN_PDM_PWR           -1  // not used
+
+// Buzzer
+#define PIN_BUZZER            12
 
 /*
  * Analog pins
@@ -131,9 +134,7 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
 
 // On-board QSPI Flash
 #define EXTERNAL_FLASH_DEVICES   GD25Q16C
-
-#define USB_MSC_BLOCK_SIZE    512
-#define USB_MSC_BLOCK_COUNT   ((2*1024*1024) / USB_MSC_BLOCK_SIZE)
+#define EXTERNAL_FLASH_USE_QSPI
 
 /*
  * PDM Interfaces
